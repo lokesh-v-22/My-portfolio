@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokesh Vanjarapu - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body data-theme="dark">
+  <div class="loading-screen">
+    <div class="loader"></div>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Lokesh Vanjarapu</h1>
+        <p>Student | Tech Enthusiast</p>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="particles-js" id="particles-home"></div>
+    <div class="home-text">
+      <h2>Hi, I'm Lokesh</h2>
+      <p>A passionate web developer, programmer, and tech enthusiast exploring new ideas and building awesome projects.</p>
+      <p class="tagline">Crafting innovative solutions with code and creativity.</p>
+      <a href="#projects" class="cta-button">Explore My Work</a>
+      <div class="home-icons">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lokesh-vanjarapu-47b581341" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="home-image">
+      <img src="Lokesh1.jpg" alt="Lokesh Vanjarapu Profile Picture" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Profile+Image'" />
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="particles-js" id="particles-about"></div>
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-card" data-tilt data-tilt-max="15">
+        <h3>B.Tech Student</h3>
+        <p>Currently pursuing a B.Tech in Computer Science at Vasireddy Venkatadri Institute of Technology (VVIT), with a focus on web development, AI, and machine learning. Passionate about building user-friendly applications.</p>
+      </div>
+      <div class="about-card" data-tilt data-tilt-max="15">
+        <h3>Diploma Graduate</h3>
+        <p>Completed a Diploma in Computer Science from Seetha Polytechnic, Bhimavaram, where I developed a strong foundation in programming, algorithms, and software development.</p>
+      </div>
+      <div class="about-card" data-tilt data-tilt-max="15">
+        <h3>Tech Enthusiast</h3>
+        <p>Avid learner interested in emerging technologies like AI, IoT, and cloud computing. I enjoy participating in hackathons and coding competitions to challenge myself and grow.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="particles-js" id="particles-projects"></div>
+    <h2>Projects</h2>
+    <div class="project-container">
+      <div class="project" data-tilt data-tilt-max="15" data-project="1">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Online Result Analysis</h3>
+        <p>A collaborative web application to visualize student academic performance using interactive charts. Built with HTML, CSS, JavaScript, and Chart.js to provide insights for educators and students.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Chart.js</p>
+        <a href="https://github.com/result-analysis" target="_blank">View Project</a>
+        <button class="details-btn" onclick="openModal(1)">Details</button>
+      </div>
+      <div class="project" data-tilt data-tilt-max="15" data-project="2">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Fraud Detection in Banking System</h3>
+        <p>A machine learning model to detect fraudulent transactions in real-time. Utilized Python, scikit-learn, and pandas for data preprocessing and model training, achieving high accuracy.</p>
+        <p><strong>Technologies:</strong> Python, scikit-learn, pandas, Jupyter</p>
+        <a href="https://github.com/fraud-detection" target="_blank">View Project</a>
+        <button class="details-btn" onclick="openModal(2)">Details</button>
+      </div>
+      <div class="project" data-tilt data-tilt-max="15" data-project="3">
+        <i class="fas fa-microphone"></i>
+        <h3>Desktop Voice Assistant</h3>
+        <p>A Python-based voice assistant that performs tasks like opening applications, sending emails, and fetching web data using speech recognition and APIs.</p>
+        <p><strong>Technologies:</strong> Python, SpeechRecognition, pyttsx3, APIs</p>
+        <a href="https://github.com/voice-assistant" target="_blank">View Project</a>
+        <button class="details-btn" onclick="openModal(3)">Details</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="particles-js" id="particles-skills"></div>
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Front-End Development</h3>
+        <div class="skill-progress"><label>HTML (Advanced)</label><div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div></div>
+        <div class="skill-progress"><label>CSS (Advanced)</label><div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div></div>
+        <div class="skill-progress"><label>JavaScript (Intermediate)</label><div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div></div>
+        <div class="skill-progress"><label>React (Basic)</label><div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div></div>
+      </div>
+      <div class="skill-category">
+        <h3>Back-End & Programming</h3>
+        <div class="skill-progress"><label>Python (Advanced)</label><div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div></div>
+        <div class="skill-progress"><label>Java (Intermediate)</label><div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div></div>
+        <div class="skill-progress"><label>C (Intermediate)</label><div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div></div>
+        <div class="skill-progress"><label>C++ (Basic)</label><div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div></div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-progress"><label>SQL (Intermediate)</label><div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div></div>
+        <div class="skill-progress"><label>Git (Intermediate)</label><div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div></div>
+        <div class="skill-progress"><label>APIs (Basic)</label><div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="particles-js" id="particles-resume"></div>
+    <h2>Resume</h2>
+    <div class="about-content">
+      <div class="about-card" data-tilt data-tilt-max="15">
+        <h3>Education</h3>
+        <p><strong>B.Tech in Computer Science</strong><br>Vasireddy Venkatadri Institute of Technology (2024 - Present)<br>CGPA: 8.0/10</p>
+        <p><strong>Diploma in Computer Science</strong><br>Seetha Polytechnic, Bhimavaram (2021 - 2023)<br>Percentage: 85%</p>
+      </div>
+      <div class="about-card" data-tilt data-tilt-max="15">
+        <h3>Experience</h3>
+        <p><strong>Web Development Intern</strong><br>Tech Solutions, Summer 2023<br>Developed responsive web pages and integrated APIs for a client project.</p>
+        <p><strong>Hackathon Participant</strong><br>CodeStreet '23, 2023<br>Built a real-time chat application, earning 2nd place.</p>
+      </div>
+    </div>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+  <button onclick="viewResume()">View Resume</button>
+  <a href="Lokesh resume.pdf" download><button>Download Resume</button></a>
+</div>
+<div id="resume-view"></div>
+  </section>
+
+  <section id="contact">
+    <div class="particles-js" id="particles-contact"></div>
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Name" />
+      <input type="email" name="email" placeholder="Your Email" required aria-label="Email" />
+      <textarea name="message" placeholder="Your Message" required aria-label="Message"></textarea>
+      <button type="submit">Send</button>
+      <p class="form-message">Message sent successfully!</p>
+    </form>
+    <p style="margin-top: 2rem;">Or reach me at: <a href="mailto:lokesh.vanjarapu@example.com">lokesh.vanjarapu@example.com</a></p>
+  </section>
+
+  <div class="modal" id="project-modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h3 id="modal-title"></h3>
+      <img id="modal-image" src="" alt="Project Image" />
+      <p id="modal-description"></p>
+      <p id="modal-technologies"></p>
+      <a id="modal-link" href="" target="_blank">View Project</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Lokesh Vanjarapu. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
